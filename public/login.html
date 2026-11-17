@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Log in | Bettada Estate</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#12301F">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div id="siteHeader"></div>
+<main class="band bone page narrow">
+  <div class="wrap">
+    <div class="card" id="authCard">
+      <div class="tabs" role="tablist" aria-label="Account">
+        <button type="button" role="tab" id="tabLogin" aria-selected="true" aria-controls="loginForm">Log in</button>
+        <button type="button" role="tab" id="tabSignup" aria-selected="false" aria-controls="signupForm">Create account</button>
+      </div>
+      <p class="notice" id="nextNote" hidden>Log in to continue. You can also check out as a guest.</p>
+      <form id="loginForm" novalidate>
+        <label for="lEmail">Email<input id="lEmail" type="email" autocomplete="email"></label>
+        <label for="lPass">Password<input id="lPass" type="password" autocomplete="current-password"></label>
+        <p class="error" id="lError" role="alert"></p>
+        <button type="submit" class="btn cherry full" id="lBtn">Log in</button>
+      </form>
+      <form id="signupForm" novalidate hidden>
+        <label for="sName">Full name<input id="sName" type="text" autocomplete="name"></label>
+        <label for="sEmail">Email<input id="sEmail" type="email" autocomplete="email"></label>
+        <label for="sPhone">Mobile number<input id="sPhone" type="tel" autocomplete="tel" inputmode="tel"></label>
+        <label for="sPass">Password (at least 8 characters)<input id="sPass" type="password" autocomplete="new-password"></label>
+        <p class="error" id="sError" role="alert"></p>
+        <button type="submit" class="btn cherry full" id="sBtn">Create account</button>
+      </form>
+    </div>
+  </div>
+</main>
+<div id="siteFooter"></div>
+<script src="/js/shared.js"></script>
+<script src="/js/login.js"></script>
+</body>
+</html>

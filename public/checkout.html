@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Checkout | Bettada Estate</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#12301F">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div id="siteHeader"></div>
+<script src="https://sdk.cashfree.com/js/v3/cashfree.js"></script>
+<main class="band bone page">
+  <div class="wrap">
+    <h1>Checkout</h1>
+    <div id="coEmpty" hidden>
+      <div class="card"><h2>Your cart is empty</h2><p>Add coffee or pepper to your cart first.</p><a class="btn cherry" href="/shop">Go to the shop</a></div>
+    </div>
+    <div class="co-grid" id="coMain" hidden>
+      <div class="co-col">
+        <div class="card" id="contactCard">
+          <h2>Contact</h2>
+          <div id="contactBody"></div>
+        </div>
+        <div class="card">
+          <h2>Delivery address</h2>
+          <div class="addr-list" id="savedAddrs"></div>
+          <form id="addrForm" novalidate><div id="addrFields"></div></form>
+          <label class="check" id="saveRow" hidden><input type="checkbox" id="saveAddr" checked> Save this address to my account</label>
+          <label for="coNotes">Note for us (optional)<input id="coNotes" type="text" maxlength="300"></label>
+        </div>
+      </div>
+      <aside class="card summary" aria-label="Order summary">
+        <h2>Your order</h2>
+        <div id="sumLines"></div>
+        <div class="sum-row"><span>Subtotal</span><span id="sumSub">₹0</span></div>
+        <div class="sum-row"><span>Delivery</span><span id="sumShip">Choose your state</span></div>
+        <div class="sum-total"><span>Total</span><span id="sumTotal">₹0</span></div>
+        <p class="small" id="sumHint"></p>
+        <p class="error" id="coError" role="alert"></p>
+        <button type="button" class="btn cherry full" id="payBtn">Pay securely</button>
+        <p class="small">You pay on Cashfree's secure page with UPI, card or netbanking. We never see your card details.</p>
+      </aside>
+    </div>
+  </div>
+</main>
+<div id="siteFooter"></div>
+<script src="/js/shared.js"></script>
+<script src="/js/checkout.js"></script>
+</body>
+</html>

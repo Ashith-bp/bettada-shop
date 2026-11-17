@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Test payment | Bettada Estate</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#12301F">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div id="siteHeader"></div>
+<main class="band bone page narrow">
+  <div class="wrap">
+    <div class="card">
+      <p class="mock-banner">Test payment page. No real money is taken. This page only exists while Cashfree keys are not set.</p>
+      <h1 style="margin:0">Pay <span id="amt"></span></h1>
+      <p id="mockOrder" class="muted"></p>
+      <p class="error" id="mError" role="alert"></p>
+      <button type="button" class="btn cherry full" id="okBtn">Simulate a successful payment</button>
+      <button type="button" class="btn outline-dark full" id="noBtn">Simulate a failed payment</button>
+    </div>
+  </div>
+</main>
+<div id="siteFooter"></div>
+<script src="/js/shared.js"></script>
+<script src="/js/mock-pay.js"></script>
+</body>
+</html>

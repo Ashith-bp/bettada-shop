@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your account | Bettada Estate</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#12301F">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div id="siteHeader"></div>
+<main class="band bone page">
+  <div class="wrap">
+    <h1>Your account</h1>
+    <div class="tabs" role="tablist" aria-label="Account sections">
+      <button type="button" role="tab" id="tabOrders" aria-selected="true">Orders</button>
+      <button type="button" role="tab" id="tabAddr" aria-selected="false">Addresses</button>
+      <button type="button" role="tab" id="tabProfile" aria-selected="false">Profile</button>
+    </div>
+
+    <section class="tabpanel" id="panelOrders" aria-labelledby="tabOrders">
+      <div class="orders" id="ordersList"><p class="muted">Loading your orders...</p></div>
+    </section>
+
+    <section class="tabpanel" id="panelAddr" aria-labelledby="tabAddr" hidden>
+      <div class="addr-list" id="addrList"></div>
+      <form class="card" id="addrForm" novalidate>
+        <h2>Add a new address</h2>
+        <div id="addrFields"></div>
+        <label class="check"><input type="checkbox" id="aDefault"> Use this as my main address</label>
+        <p class="error" id="aError" role="alert"></p>
+        <button type="submit" class="btn forest-btn" id="aBtn">Save address</button>
+      </form>
+    </section>
+
+    <section class="tabpanel" id="panelProfile" aria-labelledby="tabProfile" hidden>
+      <form class="card" id="profileForm" novalidate>
+        <h2>Your details</h2>
+        <label for="pName">Full name<input id="pName" type="text" autocomplete="name"></label>
+        <label for="pEmail">Email<input id="pEmail" type="email" disabled></label>
+        <label for="pPhone">Mobile number<input id="pPhone" type="tel" autocomplete="tel" inputmode="tel"></label>
+        <p class="error" id="pError" role="alert"></p>
+        <p class="notice good" id="pDone" hidden>Details saved.</p>
+        <button type="submit" class="btn forest-btn">Save details</button>
+      </form>
+      <form class="card" id="passForm" novalidate>
+        <h2>Change password</h2>
+        <label for="cPass">Current password<input id="cPass" type="password" autocomplete="current-password"></label>
+        <label for="nPass">New password (at least 8 characters)<input id="nPass" type="password" autocomplete="new-password"></label>
+        <p class="error" id="cError" role="alert"></p>
+        <p class="notice good" id="cDone" hidden>Password changed.</p>
+        <button type="submit" class="btn forest-btn">Change password</button>
+      </form>
+      <div><button type="button" class="btn outline-dark" id="logoutBtn">Log out</button></div>
+    </section>
+  </div>
+</main>
+<div id="siteFooter"></div>
+<script src="/js/shared.js"></script>
+<script src="/js/account.js"></script>
+</body>
+</html>

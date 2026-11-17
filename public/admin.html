@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Store admin | Bettada Estate</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#12301F">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div id="siteHeader"></div>
+<main class="band bone page">
+  <div class="wrap admin-wrap">
+    <h1>Store admin</h1>
+    <div id="adminGate"><p class="muted">Checking your login...</p></div>
+    <div id="adminApp" hidden>
+      <div class="stat-row" id="stats"></div>
+      <div class="tabs" role="tablist" aria-label="Admin sections" style="margin-top:28px">
+        <button type="button" role="tab" id="tOrders" aria-selected="true">Orders</button>
+        <button type="button" role="tab" id="tEnq" aria-selected="false">Bulk enquiries</button>
+        <button type="button" role="tab" id="tMsg" aria-selected="false">Messages</button>
+        <button type="button" role="tab" id="tPrices" aria-selected="false">Prices and stock</button>
+      </div>
+      <section class="tabpanel" id="pOrders">
+        <div class="admin-controls">
+          <label for="fStatus">Show
+            <select id="fStatus">
+              <option value="">All orders</option>
+              <option value="paid">Paid, to pack</option>
+              <option value="packed">Packed</option>
+              <option value="shipped">Shipped</option>
+              <option value="delivered">Delivered</option>
+              <option value="pending_payment">Waiting for payment</option>
+              <option value="payment_failed">Payment not completed</option>
+              <option value="cancelled">Cancelled</option>
+            </select>
+          </label>
+        </div>
+        <div class="admin-orders" id="adminOrders"></div>
+      </section>
+      <section class="tabpanel" id="pEnq" hidden><div class="table-scroll" id="enqTable"></div></section>
+      <section class="tabpanel" id="pMsg" hidden><div class="table-scroll" id="msgTable"></div></section>
+      <section class="tabpanel" id="pPrices" hidden><div class="table-scroll" id="priceTable"></div></section>
+    </div>
+  </div>
+</main>
+
+<script src="/js/shared.js"></script>
+<script src="/js/admin.js"></script>
+</body>
+</html>
